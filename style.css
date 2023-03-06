@@ -5,459 +5,420 @@
   font-family: "Fraunces", serif;
 }
 
+.ham {
+  display: none;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: repeat(8, fit-content);
+  grid-template-columns: repeat(4, 1fr);
+}
+
 header {
-  padding: 25px 0;
+  grid-column: 1 / 5;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
+  padding: 2rem 1rem;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
 }
 
-.hamburger {
-  display: none;
-}
-
-header .logo {
-  padding: 0 25px;
-}
-
-header nav ul {
+nav ul {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 0 20px;
   list-style-type: none;
 }
 
-section .text .first:hover {
-  border-bottom: 6px solid hsl(51, 100%, 49%);
-}
-
-section .text .second:hover {
-  border-bottom: 6px solid hsl(7, 99%, 70%);
-}
-
-header nav ul li {
-  padding: 0 25px;
-}
-
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: 700;
+}
+
+button {
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  transition: 0.4s;
   cursor: pointer;
 }
 
-header nav ul li:last-child {
-  text-transform: uppercase;
-}
-
-header nav ul li .btn {
-  background-color: white;
-  color: black;
-  padding: 10px 15px;
-  border-radius: 20px;
-}
-
-header nav ul li .btn:hover {
+button:hover {
   background-color: rgba(239, 233, 233, 0.8);
   color: white;
 }
 
-.container .hero {
-  text-align: center;
-  overflow: hidden;
-}
-
-.container .hero .img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.main {
+  display: flex;
+  grid-column: 1 / 5;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
   background: url(images/desktop/image-header.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
-  /* height: 500px; */
-  height: 100vh;
 }
 
-.container .hero h1 {
+.main h1 {
   color: white;
-  font-size: 40px;
-  word-spacing: 10px;
   text-transform: uppercase;
-  padding: 100px 0;
+  margin: 7rem 0 4rem;
+  font-size: 3rem;
 }
 
-.container .hero img {
-  margin-bottom: 58px;
-}
-
-section {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 192px;
-}
-
-section .one,
-section .one,
-section .two,
-section .two,
-section .three,
-section .three {
-  display: flex;
-  flex-direction: row;
+.art {
+  grid-column: span 2;
   width: 100%;
-}
-
-section .one .img,
-section .one .text,
-section .two .img,
-section .two .text,
-section .three .img,
-section .three .text {
-  width: 50%;
-  /* border: 1px solid black; */
-  height: 500px;
-}
-
-section .one .egg {
-  background: url(images/desktop/image-transform.jpg);
-  background-size: cover;
+  height: 550px;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
-section .two .cup {
-  background: url(images/desktop/image-stand-out.jpg);
-  background-size: cover;
-  background-position: center;
+.text {
+  grid-column: span 2;
 }
 
-section .three .apple {
-  background: url(images/desktop/image-graphic-design.jpg);
-  background-size: contain;
-  background-position: center;
-}
-
-section .three .orange {
-  background: url(images/desktop/image-photography.jpg);
-  background-size: contain;
-  background-position: center;
-}
-
-section .one .text,
-section .two .text {
+.text {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
+  padding: 0 9rem;
+  text-align: left;
 }
 
-section .one .text div,
-section .two .text div {
-  width: 50%;
+.text h1 {
+  padding-bottom: 2rem;
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
 }
 
-section .one .text div h2,
-section .two .text div h2 {
-  font-size: 35px;
-
-  color: hsl(167, 40%, 24%);
-  margin-bottom: 30px;
+.text p {
+  padding-bottom: 1.2rem;
+  font-size: 1rem;
+  color: hsl(232, 10%, 55%);
 }
 
-section .one .text div p,
-section .two .text div p {
-  color: hsl(198, 62%, 26%);
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
-section .one .text div a,
-section .two .text div a {
-  text-transform: uppercase;
-  color: black;
+.text a {
   text-decoration: none;
-  font-weight: 700;
-}
-
-section .img div {
-  width: 40%;
-  margin: 45% auto 0;
-  text-align: center;
-}
-
-section .img div h4 {
-  font-size: 18px;
-  padding: 25px 0;
-
-  color: hsl(167, 40%, 24%);
-}
-
-section .img div p {
-  color: hsl(198, 62%, 26%);
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.container .customerTestimony {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 100px;
-}
-
-.container .customerTestimony .top {
-  margin: 0 auto;
-  padding: 50px 0;
+  color: hsl(212, 27%, 19%);
+  font-weight: 900;
   text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
 }
 
-.container .customerTestimony .customer {
-  display: flex;
-  padding: 0 10%;
-}
-
-.container .customerTestimony .customer .indCustomer {
-  width: 33%;
-  padding: 18px;
-  text-align: center;
-}
-
-.container .customerTestimony .customer .indCustomer img {
-  width: 50px;
-  border-radius: 50%;
-  margin-bottom: 50px;
-}
-
-.container .customerTestimony .customer .indCustomer .testimony p {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 40px;
-  color: hsl(198, 62%, 26%);
-}
-
-.container .customerTestimony .customer .indCustomer .customerDetail h3 {
-  font-weight: 700;
-  margin-bottom: 10px;
+.graphics {
+  background-image: url("images/desktop/image-graphic-design.jpg");
   color: hsl(167, 40%, 24%);
 }
 
-.container .customerTestimony .customer .indCustomer .customerDetail p {
-  font-size: 10px;
+.graphics p {
+  color: hsl(167, 40%, 24%);
+  opacity: 0.7;
+}
 
+.photo {
+  background-image: url("images/desktop/image-photography.jpg");
   color: hsl(198, 62%, 26%);
 }
 
-.container .advert {
+.photo p {
+  color: hsl(198, 62%, 26%);
+  opacity: 0.7;
+}
+
+.transform {
+  background-image: url("images/desktop/image-transform.jpg");
+}
+.stand {
+  background-image: url("images/desktop/image-stand-out.jpg");
+}
+
+.graphics,
+.photo {
   display: flex;
+  justify-content: end;
+  padding: 30px;
+  align-items: center;
 }
 
-.container .advert .add {
-  width: 25%;
+.graphics p,
+.photo p {
+  width: 50%;
+  text-align: center;
+}
+
+.testimony {
+  grid-column: 1 / 5;
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.text .egg {
+  border-bottom: 4px solid hsl(51, 100%, 49%);
+  opacity: 0.7;
+  width: max-content;
+}
+
+.text .egg:hover {
+  opacity: 1;
+}
+
+.text .cup {
+  border-bottom: 4px solid hsl(7, 99%, 70%);
+  opacity: 0.7;
+  width: max-content;
+}
+
+.text .cup:hover {
+  opacity: 1;
+}
+
+.testimony > p {
+  text-transform: uppercase;
+  color: hsl(232, 10%, 55%);
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.testimony .client {
+  display: flex;
+  padding: 0 5rem;
+  gap: 2rem;
+}
+
+.testimony .client .cust {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.testimony .client .cust img {
+  width: 40px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.testimony .client .cust p {
+  font-size: 0.9rem;
+  color: hsl(232, 10%, 55%);
+  margin-bottom: 2rem;
+}
+
+.testimony .client .cust h3 {
+  font-weight: 900;
+  color: hsl(212, 27%, 19%);
+}
+
+.testimony .client .cust small {
+  font-size: 0.9rem;
+  color: hsl(232, 10%, 55%);
+}
+
+.ad {
+  grid-column: 1 span 1;
   height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.container .advert .add img {
-  width: 100%;
-  height: 100%;
+.milk {
+  background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+}
+.orange {
+  background-image: url("images/desktop/image-gallery-orange.jpg");
+}
+.cone {
+  background-image: url("images/desktop/image-gallery-cone.jpg");
+}
+.sugar {
+  background-image: url("images/desktop/image-gallery-sugarcubes.jpg");
 }
 
 footer {
-  background-color: hsl(168, 42%, 64%);
-  height: 200px;
+  grid-column: 1 / 5;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 2rem;
+  background-color: hsl(168, 42%, 64%);
 }
 
-footer img {
-  color: black;
-  padding: 20px 0;
-}
-
-footer img:hover {
-  color: white;
-  cursor: pointer;
+footer > svg {
+  margin: 2rem 0 1.5rem;
 }
 
 footer ul {
   display: flex;
-  padding: 15px 0;
+  margin-bottom: 3rem;
 }
 
 footer ul li {
-  padding: 0 25px;
   list-style-type: none;
+  padding: 0 1rem;
 }
 
 footer ul li a {
-  font-size: 19px;
   text-decoration: none;
-  color: hsl(205, 6%, 41%);
+  color: #2c7566;
 }
 
-footer ul li a:hover {
+footer a:hover {
   color: white;
-  font-weight: 700;
 }
 
-footer .contacts img {
-  padding: 20px;
+.social svg {
+  cursor: pointer;
+  margin: 0 1rem 3rem;
 }
 
-#learnMore {
-  color: hsl(168, 34%, 41%);
+.social svg path:hover {
+  fill: white;
 }
 
 @media only screen and (max-width: 375px) {
-  .container {
-    width: 100%;
-  }
-
-  .hamburger {
+  .ham {
     display: block;
-    padding: 0 10px;
-    margin-top: -10px;
-    margin-right: 15px;
     cursor: pointer;
   }
 
-  header nav ul {
+  nav {
     display: none;
   }
 
-  header nav ul.active {
-    display: block;
+  nav.active {
     position: absolute;
     width: 80%;
+    top: 70%;
     left: 10%;
     z-index: 1;
     background-color: white;
+    color: black;
     padding: 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  header nav ul li {
-    margin: 15px 0;
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  header nav ul li a {
-    color: hsl(213, 9%, 39%);
+  nav ul li {
+    padding: 1.5rem 0;
+    list-style-type: none;
   }
 
-  header nav ul li .btn {
+  nav ul li a {
+    text-decoration: none;
+    color: hsl(210, 4%, 67%);
+    font-weight: 700;
+  }
+
+  button {
+    font-weight: 700;
     background-color: hsl(51, 100%, 49%);
-    padding: 15px 20px;
-    color: hsl(213, 9%, 39%);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
   }
 
-  .container .hero .img {
+  .main {
     background: url(images/mobile/image-header.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 
-  section {
-    display: block;
-  }
-
-  .container .hero img {
-    margin-bottom: 10px;
-  }
-
-  section .one,
-  section .one {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-  }
-
-  section .two,
-  section .two,
-  section .three,
-  section .three {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  section .one .img,
-  section .two .img,
-  section .three .img {
-    width: 100%;
-    /* border: 1px solid black; */
-    height: 500px;
-  }
-
-  section .one .text,
-  section .two .text {
+  .main h1 {
+    font-size: 2.5rem;
     text-align: center;
+    letter-spacing: 0.7rem;
+  }
+
+  .text,
+  .art {
+    grid-column: 1 /5;
+  }
+
+  .text {
+    padding: 3rem 1.4rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .text h1 {
+    padding-bottom: 2rem;
+  }
+
+  .art {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
 
-  section .one .text div,
-  section .two .text div {
-    width: 80%;
+  .graphics,
+  .photo {
+    padding: 1rem;
   }
 
-  section .three .apple {
-    background: url(images/mobile/image-graphic-design.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  section .three .orange {
-    background: url(images/mobile/image-photography.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  section .img div {
-    width: 90%;
-    margin: 90% auto 0;
-  }
-
-  section .img div h4 {
-    font-size: 25px;
-  }
-
-  section .img div p {
-    font-size: 17px;
+  .graphics p,
+  .photo p {
     width: 100%;
   }
 
-  .container .customerTestimony .customer {
+  .testimony {
+    padding: 1rem 0;
+  }
+
+  .testimony > p {
+    padding: 1.5rem 0;
+  }
+
+  .testimony .client {
     display: flex;
     flex-direction: column;
-    padding: 0 10%;
+    padding: 0;
   }
 
-  .container .customerTestimony .customer .indCustomer {
-    width: 100%;
-  }
-
-  .container .customerTestimony .customer .indCustomer img {
-    margin-bottom: 20px;
-  }
-
-  .container .customerTestimony .customer .indCustomer .testimony p {
-    margin-bottom: 20px;
-  }
-
-  .container .advert {
-    flex-wrap: wrap;
-  }
-
-  .container .advert .add {
-    width: 50%;
+  .ad {
+    grid-column: span 2;
     height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
-} ;
+
+  .milk {
+    background-image: url("images/mobile/image-gallery-milkbottles.jpg");
+  }
+  .orange {
+    background-image: url("images/mobile/image-gallery-orange.jpg");
+  }
+  .cone {
+    background-image: url("images/mobile/image-gallery-cone.jpg");
+  }
+  .sugar {
+    background-image: url("images/mobile/image-gallery-sugar-cubes.jpg");
+  }
+}
