@@ -1,14 +1,12 @@
-const hamburger = document.querySelector(".hamburger");
-const ul = document.querySelector("ul");
+const hamburger = document.querySelector(".ham");
+const nav = document.querySelector("nav");
 
 hamburger.addEventListener("click", () => {
-  ul.classList.toggle("active");
+  nav.classList.toggle("active");
 });
 
 document.querySelectorAll(".links").forEach((link) =>
   link.addEventListener("click", () => {
-    ul.classList.toggle("active");
+    nav.classList.toggle("active");
   })
 );
-
-// .container .nav .nav_link ul
